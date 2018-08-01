@@ -13,8 +13,29 @@
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * Math.floor(max - min)) + min;
 }
-
 var randomInt = getRandomInt(1, 100);
+var tries= 0;
+var guess;
+while(randomInt!=guess){
+	guess=parseInt(prompt("Choose a number between 1 and 100."));
+	tries++
+	if (randomInt>guess) {
+		alert("Your guess is too low")
+	}
+	else if(randomInt<guess){
+		alert("Your guess is too high.")
+	}
+	else{
+		alert("Congratulations, it took you" + tries+ "tries.")
+		break;
+	}
+
+}
+
+
+
+
+
 /* END STARTING CODE */
 
 // your code goes under here

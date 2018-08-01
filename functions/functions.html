@@ -10,13 +10,48 @@
 
     <script>
 /* Checks if a character is a letter */
+
 function isLetter(char) {
     char = char.toLowerCase();
     return "abcdefghijklmnopqrstuvwxyz".indexOf(char) >= 0;
 }
 
-// Write your isPalindrome function here!
+function isPalindrome(word){
+	var begin=0;
+	var end= word.length - 1;
+	var boolean;
 
+	for(var i=begin;i<word.length/2;i++){
+		if(word[begin]==word[end]){
+			begin++;
+			end--;
+			boolean=true;
+
+		}
+	
+		else{
+			boolean=false;
+			break;
+		}
+	}
+	document.write(boolean);
+	if (boolean==true) {
+		alert("isPalindrome")
+		return true;
+	}
+	else{
+		alert("notPalindrome");
+		return false;
+
+	}
+
+
+
+
+}
+var word=prompt("Give me a word.");
+// Write your isPalindrome function here!
+isPalindrome(word);
     </script>
 </body>
 
